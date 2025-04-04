@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<header >
+    <div class="bg-pink-300 flex justify-center mx-auto space-x-4">
+        <div><a href="">home</a> </div>
+        <div> <a href=""></a>about us</div>
+        <div> <a href="#" id="contact">Contact Us</a></div>
+    </div>
+</header>
+<body>
+    <!-- form box -->
+    <div class="flex justify-center mt-8">
+        <div class="bg-green-300 p-6 rounded-lg shadow-lg w-96">
+            <form class="space-y-4" id="form">
+                <div>
+                    <label for="input1" class="block text-sm font-medium text-gray-700">Input 1</label>
+                    <input type="text" id="input1" name="input1" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500">
+                </div>
+                <div>
+                    <label for="input2" class="block text-sm font-medium text-gray-700">Input 2</label>
+                    <input type="text" id="input2" name="input2" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500">
+                </div>
+                <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-pink-600">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- main body -->
+     <div class="flex">
+    <!-- image -->
+    <div class="size-full">
+        
+            <img src="https://tse4.mm.bing.net/th?id=OIP.SVpDQMzoQITrwCVnAkD7DgHaJX&pid=Api&P=0&h=180" alt="Placeholder Image" class="rounded-lg shadow-md">
+        
+    </div>
+    <!-- txt -->
+    <div class="size-full ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem officia at accusantium adipisci soluta quis ad fugiat nesciunt quas aliquid nihil autem, totam facere ea facilis doloremque. Labore dolorum veritatis quis aperiam. Fugiat repellendus asperiores vel</div>
+  </div>  
+</body>
+
+
+<footer class="flex border-2" >
+        <div class="text-center p-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, voluptates?</div>
+        <div class="text-center p-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, voluptates?</div>
+        <div class="text-center p-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, voluptates?</div>
+        <div class="text-center p-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, voluptates?</div>
+
+</footer>
+
+<script>
+    let contact=document.getElementById("contact")
+    contact.addEventListener("click",contactus)
+    let form=document.getElementById('form')
+    function contactus(){
+        if (form) {
+
+            alert("Contact us form is available!");
+
+        }
+    }
+</script>
+</html>
