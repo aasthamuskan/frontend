@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BMI generator</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    .slide {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      z-index: 0;
+    }
+    .slide.active {
+      opacity: 1;
+      z-index: 10;
+    }
+    main {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="slide absolute transition-all duration-1000" src="https://wallpaperaccess.com/full/3344646.jpg" alt="">
+    <img class="slide absolute transition-all duration-1000" src="https://th.bing.com/th/id/R.29037419ec790d234f24aefb96ba010b?rik=Bl8cjDPo4m%2bnmw&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f7%2f1%2f4%2f717842-popular-ghost-wallpapers-1920x1200-hd.jpg&ehk=m35EC9r2wLVIetcskCJtjYbRhDmcR2zbzOFnkN4yzrA%3d&risl=&pid=ImgRaw&r=0" alt="">
+    <img class="slide absolute transition-all duration-1000" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8a586b07-9a42-4f8f-8b63-551c6c27c1c1/dfpri6p-e395013d-e794-4455-a5be-26c9e5f972b0.png" alt="">
+    <img class="slide absolute transition-all duration-1000" src="https://wallpaperaccess.com/full/1293465.jpg" alt="">
+    
+    <!-- Added IDs to buttons -->
+    <button id="prev" class="absolute px-3 py-1 text-xl bg-green-300 rounded border top-40 left-5">prev</button>
+    <button id="next" class="absolute px-3 py-1 text-xl bg-green-300 rounded border top-40 right-5">next</button>
+  </main>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+
+    let currentIndex = 0;
+    slides[currentIndex].classList.add('active');
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[index].classList.add('active');
+    }
+
+    prevButton.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(currentIndex);
+    });
+
+    nextButton.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    });
+  </script>
+</body>
+</html>

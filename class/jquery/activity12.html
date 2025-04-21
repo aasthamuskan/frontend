@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Form Validation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  <h3 class="text-center font-bold text-xl mt-5">Form Validation</h3>
+  
+  <div class="border m-5 rounded shadow-gray-400 p-5 bg-white max-w-md mx-auto">
+    <form id="myForm">
+      <label for="username">User Name:</label><br>
+      <input type="text" id="username" placeholder="Enter your name" class="border shadow-gray-400 shadow-xl rounded w-full px-2 py-1"><br><br>
+
+      <label for="phone">Phone No:</label><br>
+      <input type="text" id="phone" placeholder="Enter your phone number" class="border shadow-gray-400 shadow-xl rounded w-full px-2 py-1"><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="text" id="email" placeholder="Enter your email" class="border shadow-gray-400 shadow-xl rounded w-full px-2 py-1"><br><br>
+
+      <input type="submit" value="Validate" class="border border-cyan-700 bg-cyan-700 text-white rounded px-4 py-2 hover:bg-cyan-600 cursor-pointer">
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form from submitting  and also from refreshing
+        // removing the extra spaces n unwanted things
+      const name = document.getElementById('username').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+
+      // Simple validation
+      if (name === "") {
+        alert("Name cannot be empty.");
+        return;
+      }
+
+      if (!/^\d{10}$/.test(phone)) {
+        alert("Phone number must be exactly 10 digits.");
+        return;
+      }
+
+      if (!email.includes("@") || !email.includes(".")) {
+        alert("Please enter a valid email.");
+        return;
+      }
+
+      alert("Form submitted successfully!");
+    });
+  </script>
+</body>
+</html>

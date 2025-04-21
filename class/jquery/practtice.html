@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+<style>
+    .highlight {
+        padding: 10px;
+        background-color: yellow;
+        margin-bottom: 10px;
+    }
+    #myDiv {
+        background-color: lightblue;
+        padding: 10px;
+        margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+    <p id="para1">click me to hide!</p>
+    <button id="btn">click me</button>
+    <h1>this is heading</h1>
+    <div class="highlight" id="highlight">I will fade out using JavaScript</div>
+    <div id="myDiv">click me to slide up</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Hide paragraph on click
+            document.getElementById("para1").addEventListener("click", function() {
+                this.style.display = "none";
+            });
+
+            // Alert on button click
+            document.getElementById("btn").addEventListener("click", function() {
+                alert("button clicked");
+            });
+
+            // Change heading color
+            document.querySelector("h1").style.color = "blue";
+
+            // Fade out the highlight div
+            const highlight = document.getElementById("highlight");
+            let opacity = 1;
+            const fadeOut = setInterval(function() {
+                if (opacity <= 0) {
+                    clearInterval(fadeOut);
+                    highlight.style.display = "none";
+                } else {
+                    opacity -= 0.05;
+                    highlight.style.opacity = opacity;
+                }
+            }, 150);
+
+            // Slide up the myDiv on click
+            document.getElementById("myDiv").addEventListener("click", function() {
+                const element = this;
+                let height = element.offsetHeight;
+                const slideUp = setInterval(function() {
+                    if (height <= 0) {
+                        clearInterval(slideUp);
+                        element.style.display = "none";
+                    } else {
+                        height -= 5;
+                        element.style.height = height + "px";
+                    }
+                }, 20);
+            });
+        });
+    </script>
+</body>
+</html>
