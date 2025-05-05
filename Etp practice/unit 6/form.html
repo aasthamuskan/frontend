@@ -1,0 +1,73 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Form with jQuery + Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
+
+  <div class="bg-white p-6 rounded shadow-md w-80">
+    <h2 class="text-xl font-bold mb-4">User Form</h2>
+
+    <input type="text" id="name" placeholder="Enter Name" class="border p-2 w-full mb-2">
+    <input type="text" id="age" placeholder="Enter Age" class="border p-2 w-full mb-4">
+    <button id="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Submit</button>
+
+    <p id="result" class="mt-4 text-gray-700"></p>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+      $("#submit").click(function(){
+        let name = $("#name").val();
+        let age = $("#age").val();
+        $("#result").html("Name: " + name + "<br>Age: " + age);
+      });
+    });
+  </script>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formatted Result</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-purple-100 min-h-screen flex items-center justify-center">
+
+  <div class="bg-white p-8 rounded-xl shadow-xl w-96">
+    <h2 class="text-2xl font-bold text-center mb-6 text-blue-600">User Details</h2>
+
+    <input type="text" id="name" placeholder="Enter Name" class="border border-gray-300 p-2 w-full rounded mb-3">
+    <input type="number" id="age" placeholder="Enter Age" class="border border-gray-300 p-2 w-full rounded mb-4">
+    <button id="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 w-full rounded">Submit</button>
+
+    <div id="result" class="mt-6 hidden border-l-4 border-blue-400 bg-blue-50 p-4 rounded text-blue-800">
+      <!-- Result will appear here -->
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+      $("#submit").click(function(){
+        let name = $("#name").val();
+        let age = $("#age").val();
+        
+        if(name && age) {
+          $("#result").html(`
+            <p><strong>👤 Name:</strong> ${name}</p>
+            <p><strong>🎂 Age:</strong> ${age}</p>
+          `).removeClass("hidden");
+        } else {
+          $("#result").html(`<p>Please fill all fields! ❗</p>`).removeClass("hidden").addClass("text-red-600 border-red-400 bg-red-50");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
+
