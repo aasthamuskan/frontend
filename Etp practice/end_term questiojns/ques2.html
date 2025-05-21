@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Posts</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 p-4">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6 text-center">Blog Posts</h1>
+
+    <div class="grid gap-6 md:grid-cols-2">
+      <!-- Post 1 -->
+      <div class="bg-white p-6 rounded-xl shadow-md">
+        <h2 class="text-xl font-semibold mb-2">Post Title 1</h2>
+        <p class="excerpt mb-4">This is a short excerpt of the first post...</p>
+        <p class="full-content hidden mb-4">This is the full content of the first blog post. It provides more detailed information about the topic discussed in the excerpt.</p>
+        <button onclick="toggleContent(this)" class="read-more-btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Read More</button>
+      </div>
+
+      <!-- Post 2 -->
+      <div class="bg-white p-6 rounded-xl shadow-md">
+        <h2 class="text-xl font-semibold mb-2">Post Title 2</h2>
+        <p class="excerpt mb-4">This is a short excerpt of the second post...</p>
+        <p class="full-content hidden mb-4">This is the full content of the second blog post. It expands on the points made in the excerpt with detailed insights and examples.</p>
+        <button onclick="toggleContent(this)" class="read-more-btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Read More</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleContent(button) {
+      const fullContent = button.previousElementSibling;
+      const isHidden = fullContent.classList.contains('hidden');
+
+      if (isHidden) {
+        fullContent.classList.remove('hidden');
+        button.textContent = 'Show Less';
+      } else {
+        fullContent.classList.add('hidden');
+        button.textContent = 'Read More';
+      }
+    }
+  </script>
+</body>
+
+</html>
