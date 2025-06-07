@@ -3,175 +3,342 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Navbar Example</title>
+  <title>VOSMOS Metacommerce</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-KYK1YuQ3qvu+D2AyWTXUFE9N7kWzNcNRo9L1vGhcbBvBbALzEzVhO6FfFaylTKnHaN+u9qLs2osx8OmjEFs1eQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .testimonial-slide {
+      min-width: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+  </style>
 </head>
 <body class="bg-black text-white">
-  <!-- navbar   -->
-  <nav class="flex items-center justify-between px-12 py-10 bg-black shadow-md stikeky">
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between px-12 py-10 bg-black shadow-md sticky top-0">
     <!-- Logo -->
     <div class="flex items-center space-x-2 text-white text-2xl font-bold px-6">
-     <img src="logo.png" alt="Logo" class="w-40 h-15">
-    
+      <img src="logo.png" alt="Logo" class="w-40 h-15">
     </div>
 
-    <!-- Nav links -->
+    <!-- Nav Links -->
     <div class="flex items-center space-x-8 text-lg font-medium px-6">
-      <a href="#" class="">Features</a>
-      <a href="#" class="">Pricing</a>
-<!-- resouce ke options -->
+      <a href="#" class="hover:text-teal-400">Features</a>
+      <a href="#" class="hover:text-teal-400">Pricing</a>
+      <!-- Resources Dropdown -->
       <div class="relative group">
-        <button class="">Resources</button>
+        <button class="hover:text-teal-400">Resources</button>
         <div class="absolute hidden group-hover:block bg-gray-900 mt-2 rounded-md shadow-lg w-40 z-10">
           <a href="#" class="block px-4 py-2 hover:bg-gray-700">Blogs</a>
           <a href="#" class="block px-4 py-2 hover:bg-gray-700">Newsroom</a>
         </div>
       </div>
-      <!-- signup button -->
+      <!-- Signup Button -->
       <a href="#" class="bg-teal-400 hover:bg-teal-500 text-black font-semibold py-2 px-4 rounded-md">
         Sign Up
       </a>
     </div>
   </nav>
-  <!-- video section -->
-<!-- Hero Section -->
-<section class="bg-black text-white py-16 px-18">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
-    
-    <!-- Left Content -->
-    <div class="md:w-1/2 space-y-10 py-10 px-15">
-      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight py-5">
-        Make your virtual<br class="py-5"/>
-        store a reality within<br class="py-5" />
-        minutes
-      </h1>
-      <p class="text-lg text-gray-300" class="py-5">Think. Design. Launch.</p>
-      <a href="#" class="inline-block bg-teal-400 text-black font-bold px-6 py-3 rounded-md">
-        SIGN UP
-      </a>
-    </div>
 
-    <!-- video wala part -->
-    <div class="rounded-3xl overflow-hidden">
-      <video width="720" height="auto" autoplay loop class="rounded-3xl shadow-lg">
-      <source src="B roll(18-01-2023).webm" type="video/webm">
-      Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</section>
-
-<!-- Features Section -->
-<section id="features" class="bg-black text-white py-16 px-6">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-6">
-    
-    <!-- Card 1-->
-    <div class="group bg-[#1d1d1d] hover:bg-[#009688] transition duration-300 ease-in-out rounded-3xl p-6 cursor-pointer">
-      <div class="text-[#00cec9] group-hover:text-white text-4xl mb-4 py-3 px-2">
-       <img src="https://metacommerce.vosmos.world/assets/images/hs2-1.svg">
+  <!-- Hero Section -->
+  <section class="bg-black text-white py-16 px-18">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+      <!-- Left Content -->
+      <div class="md:w-1/2 space-y-10 py-10 px-15">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight py-5">
+          Make your virtual<br class="py-5"/>
+          store a reality within<br class="py-5" />
+          minutes
+        </h1>
+        <p class="text-lg text-gray-300 py-5">Think. Design. Launch.</p>
+        <a href="#" class="inline-block bg-teal-400 text-black font-bold px-6 py-3 rounded-md">
+          SIGN UP
+        </a>
       </div>
-      <h3 class="text-2xl font-bold group-hover:text-white mb-2">Easier</h3>
-      <p class="text-lg text-gray-300 group-hover:text-white">Pre-designed templates</p>
-    </div>
 
-    <!-- Card 2-->
-    <div class="group bg-[#1d1d1d] hover:bg-[#009688] transition duration-300 ease-in-out rounded-3xl p-6 cursor-pointer">
-      <div class="text-[#00cec9] group-hover:text-white text-4xl mb-4 py-3 px-2">
-        <img src="https://metacommerce.vosmos.world/assets/images/hs2-2.svg">
+      <!-- Video Part -->
+      <div class="rounded-3xl overflow-hidden">
+        <!-- Placeholder video; update the src with the correct path -->
+        <video width="720" height="auto" autoplay loop muted class="rounded-3xl shadow-lg">
+          <source src="B-roll-18-01-2023.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
       </div>
-      <h3 class="text-2xl font-bold group-hover:text-white mb-2">Faster</h3>
-      <p class="text-lg text-gray-300 group-hover:text-white">10 Minutes or less</p>
     </div>
+  </section>
 
-    <!-- Card 3-->
-    <div class="group bg-[#1d1d1d] hover:bg-[#009688] transition duration-300 ease-in-out rounded-3xl p-6 cursor-pointer">
-      <div class="text-[#00cec9] group-hover:text-white text-4xl mb-4 py-3 px-2">
-        <img src="https://metacommerce.vosmos.world/assets/images/hs2-3.svg">
+  <!-- Features Section -->
+  <section id="features" class="bg-black text-white py-16 px-6">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="group bg-[#1d1d1d] hover:bg-[#009688] transition duration-300 ease-in-out rounded-3xl p-6 cursor-pointer">
+        <div class="text-[#00cec9] group-hover:text-white text-4xl mb-4 py-3 px-2">
+          <img src="https://metacommerce.vosmos.world/assets/images/hs2-1.svg" alt="Easier Icon">
+        </div>
+        <h3 class="text-2xl font-bold group-hover:text-white mb-2">Easier</h3>
+        <p class="text-lg text-gray-300 group-hover:text-white">Pre-designed templates</p>
       </div>
-      <h3 class="text-2xl font-bold group-hover:text-white mb-2">Smarter</h3>
-      <p class="text-lg text-gray-300 group-hover:text-white">AI enabled all the way</p>
+
+      <!-- Card 2 -->
+      <div class="group bg-[#1d1d1d] hover:bg-[#009688] transition duration-300 ease-in-out rounded-3xl p-6 cursor-pointer">
+        <div class="text-[#00cec9] group-hover:text-white text-4xl mb-4 py-3 px-2">
+          <img src="https://metacommerce.vosmos.world/assets/images/hs2-2.svg" alt="Faster Icon">
+        </div>
+        <h3 class="text-2xl font-bold group-hover:text-white mb-2">Faster</h3>
+        <p class="text-lg text-gray-300 group-hover:text-white">10 Minutes or less</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="group bg-[#1d1d1d] hover:bg-[#009688] transition duration-300 ease-in-out rounded-3xl p-6 cursor-pointer">
+        <div class="text-[#00cec9] group-hover:text-white text-4xl mb-4 py-3 px-2">
+          <img src="https://metacommerce.vosmos.world/assets/images/hs2-3.svg" alt="Smarter Icon">
+        </div>
+        <h3 class="text-2xl font-bold group-hover:text-white mb-2">Smarter</h3>
+        <p class="text-lg text-gray-300 group-hover:text-white">AI enabled all the way</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section 1 -->
+  <section class="bg-black text-white py-16 px-18">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+      <!-- Left Content -->
+      <div class="md:w-1/2 space-y-10 py-10 px-15">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight py-5">
+          Kickstart your <br class="py-5"/>
+          brands digital<br class="py-5" />
+          transformation<br>
+          journey today
+        </h1>
+        <p class="text-lg text-gray-300 py-5">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore distinctio ex doloremque cumque, 
+          dolorem aperiam ad ratione temporibus! Eos neque sequi et vel magni obcaecati expedita quae perspiciatis. 
+          Id incidunt libero provident non commodi doloremque nulla dolores blanditiis, repellendus error, 
+          eveniet sunt quam veniam quaerat?
+        </p>
+      </div>
+
+      <!-- Image Part -->
+      <div>
+        <img src="h2.svg" alt="Digital Transformation Image"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section 2 -->
+  <section class="bg-[#121212] text-white py-16 px-6">
+    <h2 class="text-3xl md:text-5xl font-bold text-white text-center mb-12">
+      Game Changing Solutions. Simplified.
+    </h2>
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <!-- Image -->
+      <div class="rounded-3xl overflow-hidden shadow-lg">
+        <img 
+          src="show1.png" 
+          alt="3D shoes" 
+          class="w-full rounded-3xl object-cover"
+        />
+      </div>
+
+      <!-- Text Content -->
+      <div>
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
+          Not a tech wizard? We got you covered
+        </h2>
+        <p class="text-gray-400 text-lg leading-relaxed">
+          All you need to be is a Visionary. Build your virtual store without the need for complicated codes and software. Leave that to us.
+        </p>
+      </div>
     </div>
 
-  </div>
-</section>
-
-<!-- //icon nahi lag paa rahe hai or video wala part bhi nahi aa raha hai//dubts to ask -->
-
-<!-- //next part is second about -->
- <section class="bg-black text-white py-16 px-18">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
-    
-    <!-- Left Content -->
-    <div class="md:w-1/2 space-y-10 py-10 px-15">
-      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight py-5">
-      Kickstart your <br class="py-5"/>
-      brands digital<br class="py-5" />
-      transformation<br>
-      journey today
-      </h1>
-      <p class="text-lg text-gray-300" class="py-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore distinctio ex doloremque cumque, dolorem aperiam ad ratione temporibus! Eos neque sequi et vel magni obcaecati expedita quae perspiciatis. Id incidunt libero provident non commodi doloremque nulla dolores blanditiis, repellendus error, eveniet sunt quam veniam quaerat?</p>
-
+    <!-- Second Part of About Section -->
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center mt-12">
+      <!-- Text -->
+      <div>
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
+          Lorem ipsum dolor sit amet consectetur adipisicing.
+        </h2>
+        <p class="text-gray-400 text-lg leading-relaxed">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est architecto, molestiae nam magnam consequuntur 
+          nesciunt fuga vel voluptatem quisquam dolore. Possimus placeat suscipit consequuntur praesentium necessitatibus 
+          enim. Ipsum minus autem eos repellendus animi veniam magnam?
+        </p>
+      </div>
+      <!-- Image -->
+      <div class="rounded-3xl overflow-hidden shadow-lg">
+        <img 
+          src="show1.png" 
+          alt="3D shoes" 
+          class="w-full rounded-3xl object-cover"
+        />
+      </div>
     </div>
+  </section>
 
-    <!-- video wala part -->
-    <div >
-      <img  src="h2.svg"/>
-    </div>
-  </div>
-</section>
-
-<section class="bg-[#121212] text-white py-16 px-6">
-   <h2 class="text-3xl md:text-5xl font-bold text-white text-center mb-12">
-    Game Changing Solutions. Simplified.
-  </h2>
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-    
-    <!--  Image -->
-    <div class="rounded-3xl overflow-hidden shadow-lg">
-      <img 
-        src="show1.png" 
-        alt="3D shoes" 
-        class="w-full rounded-3xl object-cover"
-      />
-    </div>
-
-    <!-- Text Content -->
-    <div>
-      <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
-        Not a tech wizard? We got you covered
-      </h2>
-      <p class="text-gray-400 text-lg leading-relaxed">
-        All you need to be is a Visionary. Build your virtual store without the need for complicated codes and software. Leave that to us.
+  <!-- Benefits Section -->
+  <section class="bg-black text-white py-20 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold">Benefits</h2>
+      <p class="mt-4 text-lg text-gray-300">
+        Unlock unique features with the DIY platform
       </p>
     </div>
 
-  </div>
-  <!-- //second part of about section -->
-   <!-- TEXT -->
-   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-    
-     <div>
-      <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
-        Lorem ipsum dolor sit amet consectetur adipisicing.
-      </h2>
-      <p class="text-gray-400 text-lg leading-relaxed">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est architecto, molestiae nam magnam consequuntur nesciunt fuga vel voluptatem quisquam dolore. Possimus placeat suscipit consequuntur praesentium necessitatibus enim. Ipsum minus autem eos repellendus animi veniam magnam?
-      </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px overflow-hidden rounded-xl border border-gray-700 rounded-3xl">
+      <!-- Item 1 -->
+      <div class="bg-black p-10 text-center border border-gray-800">
+        <img src="https://metacommerce.vosmos.world/assets/images/hs4-1.svg" alt="3D Showcase" class="mx-auto h-12 mb-6" />
+        <h3 class="font-semibold text-lg mb-2">Immersive 3D Product Showcase</h3>
+        <p class="text-sm text-gray-400">Wow your customers with 3D product displays.</p>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="bg-black p-10 text-center border border-gray-800">
+        <img src="https://metacommerce.vosmos.world/assets/images/hs4-3.svg" alt="Global Reach" class="mx-auto h-12 mb-6" />
+        <h3 class="font-semibold text-lg mb-2">Global Reach</h3>
+        <p class="text-sm text-gray-400">Build your brand at a scale which cannot be imagined in a brick and mortar store.</p>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="bg-black p-10 text-center border border-gray-800">
+        <img src="https://metacommerce.vosmos.world/assets/images/hs4-5.svg" alt="24/7 Sales" class="mx-auto h-12 mb-6" />
+        <h3 class="font-semibold text-lg mb-2">24/7 Product Sales</h3>
+        <p class="text-sm text-gray-400">Promote and sell to your customers at anytime.</p>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="bg-black p-10 text-center border border-gray-800">
+        <img src="https://metacommerce.vosmos.world/assets/images/hs4-2.svg" alt="Cost Effective" class="mx-auto h-12 mb-6" />
+        <h3 class="font-semibold text-lg mb-2">Cost-Effective Operations</h3>
+        <p class="text-sm text-gray-400">Run your business effectively at a fraction of the cost of the real world.</p>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="bg-black p-10 text-center border border-gray-800">
+        <img src="https://metacommerce.vosmos.world/assets/images/hs4-4.svg" alt="Measurable Activity" class="mx-auto h-12 mb-6" />
+        <h3 class="font-semibold text-lg mb-2">Measurable Activity</h3>
+        <p class="text-sm text-gray-400">Gain valuable insights into customer behaviour and product performance.</p>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="bg-black p-10 text-center border border-gray-800">
+        <img src="https://metacommerce.vosmos.world/assets/images/hs4-6.svg" alt="AI Support" class="mx-auto h-12 mb-6" />
+        <h3 class="font-semibold text-lg mb-2">VIRSA - AI-Support</h3>
+        <p class="text-sm text-gray-400">Make it a personalised experience for your customer with AI enabled functionality in the store.</p>
+      </div>
     </div>
-    <!-- IMage -->
-    <div class="rounded-3xl overflow-hidden shadow-lg">
-      <img 
-        src="show1.png" 
-        alt="3D shoes" 
-        class="w-full rounded-3xl object-cover"
-      />
+  </section>
+
+  <!-- Testimonial Carousel Section -->
+  <!-- Testimonial Carousel Section -->
+<section class="py-16 text-center bg-gray-900 text-white">
+  <h2 class="text-3xl md:text-4xl font-bold mb-12">Here's what our clients say about us</h2>
+
+  <div class="relative max-w-7xl mx-auto overflow-hidden">
+    <!-- Carousel Wrapper -->
+    <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+      <!-- Slide 1 -->
+      <div class="testimonial-slide flex gap-6 justify-center px-6">
+        <div class="bg-[#1E2A2B] p-8 rounded-3xl w-full max-w-md">
+          <p class="text-[#F5F5F5] text-lg leading-relaxed italic mb-6">
+            We are a brand for the new generation who happen to be early adopters when it comes to technology. 
+            VOSMOS and Kestone have given us this exciting opportunity to be a part of history being created by 
+            transforming the retail experience for consumers.
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="bg-[#26C6DA] rounded-full w-12 h-12 flex items-center justify-center">
+              <img src="https://metacommerce.vosmos.world/assets/images/girl.png" alt="Dipali Mathur Dayal" class="w-8 h-8 rounded-full">
+            </div>
+            <div class="text-left">
+              <p class="font-semibold text-white text-lg">Dipali Mathur Dayal</p>
+              <p class="text-white text-sm">Co-founder & CEO - Super Smelly</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#1E2A2B] p-8 rounded-3xl w-full max-w-md">
+          <p class="text-[#F5F5F5] text-lg leading-relaxed italic mb-6">
+            Hassle free store creation and it’s amazing to work with a team that truly understands your needs.
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="bg-[#26C6DA] rounded-full w-12 h-12 flex items-center justify-center">
+              <img src="https://metacommerce.vosmos.world/assets/images/men.png" alt="Arjun Patel" class="w-8 h-8 rounded-full">
+            </div>
+            <div class="text-left">
+              <p class="font-semibold text-white text-lg">Arjun Patel</p>
+              <p class="text-white text-sm">Wave Communication</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="testimonial-slide flex gap-6 justify-center px-6">
+        <div class="bg-[#1E2A2B] p-8 rounded-3xl w-full max-w-md">
+          <p class="text-[#F5F5F5] text-lg leading-relaxed italic mb-6">
+            The platform allowed me to customize my store. Being a jewellery brand, I wanted to ensure that the detailing of the product does not get lost. The platform was intuitive and easy to use, even for someone with limited technical knowledge.
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="bg-[#26C6DA] rounded-full w-12 h-12 flex items-center justify-center">
+              <img src="https://metacommerce.vosmos.world/assets/images/girl.png" alt="Amrita Roy" class="w-8 h-8 rounded-full">
+            </div>
+            <div class="text-left">
+              <p class="font-semibold text-white text-lg">Amrita Roy</p>
+              <p class="text-white text-sm">1AQB</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#1E2A2B] p-8 rounded-3xl w-full max-w-md">
+          <p class="text-[#F5F5F5] text-lg leading-relaxed italic mb-6">
+            Displaying 50 pieces of art was a cakewalk and I am really looking forward to promoting my art globally with this gallery.
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="bg-[#26C6DA] rounded-full w-12 h-12 flex items-center justify-center">
+              <img src="https://metacommerce.vosmos.world/assets/images/girl.png" alt="Meenakshi" class="w-8 h-8 rounded-full">
+            </div>
+            <div class="text-left">
+              <p class="font-semibold text-white text-lg">Meenakshi</p>
+              <p class="text-white text-sm">Aakar</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Arrows -->
+    <button onclick="prevSlide()" class="absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-2xl p-2 hover:text-teal-400 transition duration-300">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button onclick="nextSlide()" class="absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-2xl p-2 hover:text-teal-400 transition duration-300">
+      <i class="fas fa-chevron-right"></i>
+    </button>
   </div>
 </section>
 
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.testimonial-slide');
+
+    function showSlide(index) {
+      const totalSlides = slides.length;
+      if (index >= totalSlides) {
+        currentSlide = 0;
+      } else if (index < 0) {
+        currentSlide = totalSlides - 1;
+      } else {
+        currentSlide = index;
+      }
+      const offset = -currentSlide * 100; // Adjust for slide width
+      document.getElementById('carousel').style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+  </script>
 </body>
 </html>
-
