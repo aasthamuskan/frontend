@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crousal practice</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="flex justify-center items-center h-screen">
+         <button onclick="prev()" class="rounded-full bg-grey-300 px-4 shadow bg-gray-400 "> ❮ </button>
+        <img id="crousal" src="https://metacommerce.vosmos.world/assets/images/Jepgs/NewPhotorealism.jpg">
+       
+        <button onclick="next()" class="rounded-full bg-grey-300 px-4 shadow bg-gray-400 "> ❯ </button>
+    </div>
+    <script>
+        const images=[
+            "https://metacommerce.vosmos.world/assets/images/Jepgs/Interactive%20Manuals%201.jpg",
+            "https://metacommerce.vosmos.world/assets/images/Jepgs/Chat.jpg",
+            "https://metacommerce.vosmos.world/assets/images/Jepgs/Virtual%20try%20On.jpg",
+            "https://metacommerce.vosmos.world/assets/images/Jepgs/Reports.jpg"
+        ]
+        let index=0;
+        function showImage(){
+            document.getElementById("crousal").src=images[index];
+        }
+        function prev(){
+            index--;
+            if(index<0){
+                index=images.length-1;
+            }
+            showImage();
+        }
+        function next(){
+            index++;
+            if(index>=images.length){
+                index=0;
+            }
+            showImage();
+        }
+        </script>
+</body>
+</html>

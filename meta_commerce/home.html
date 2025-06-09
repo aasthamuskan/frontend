@@ -231,259 +231,107 @@
   </section>
 
   <!-- Testimonial Carousel Section -->
-  <!-- Testimonial Carousel Section -->
-<section class="py-16 text-center bg-gray-900 text-white">
-  <h2 class="text-3xl md:text-4xl font-bold mb-12">Here's what our clients say about us</h2>
-
-  <div class="relative max-w-7xl mx-auto overflow-hidden">
-    <!-- Carousel Wrapper -->
-    <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
-      <!-- Slide 1 -->
-      <div class="testimonial-slide flex gap-6 justify-center px-6">
-        <div class="bg-[#1E2A2B] p-8 rounded-3xl w-full max-w-md">
-          <p class="text-[#F5F5F5] text-lg leading-relaxed italic mb-6">
-            We are a brand for the new generation who happen to be early adopters when it comes to technology. 
-            VOSMOS and Kestone have given us this exciting opportunity to be a part of history being created by 
-            transforming the retail experience for consumers.
-          </p>
-          <div class="flex items-center gap-4">
-            <div class="bg-[#26C6DA] rounded-full w-12 h-12 flex items-center justify-center">
-              <img src="https://metacommerce.vosmos.world/assets/images/girl.png" alt="Dipali Mathur Dayal" class="w-8 h-8 rounded-full">
-            </div>
-            <div class="text-left">
-              <p class="font-semibold text-white text-lg">Dipali Mathur Dayal</p>
-              <p class="text-white text-sm">Co-founder & CEO - Super Smelly</p>
-            </div>
+  
+<section class="bg-[#1f1f1f] text-white text-center py-16 px-6">
+  <h2 class="text-3xl font-bold mb-12">Here's what our clients say about us</h2>
+ 
+  <div  class="max-w-7xl mx-auto overflow-hidden">
+     <button onclick="prev()" class="absolute rounded-full bg-grey-300 px-4 shadow bg-gray-400  "> ❮</button>
+    <!-- //crousal container -->
+    <div id="crousal" class=" flex transition-transform duration-500 ease-in-out">
+<!-- box1 -->
+      <div class="testimonial-slide  px-4 w-[50%] max-w-[50%]">
+        <div class="bg-[#454546] p-8 rounded-3xl w-full max-w-md mx-auto">
+          <p class="text-lg italic mb-6">We are a brand for the new generation who happen to be early adopters...</p>
+          <div class="flex items-center px-2 gap-4">
+              <img src="https://metacommerce.vosmos.world/assets/images/girl.png" class="w-15 h-20 rounded-full">
+                <div class="text-left gap-4">
+                <p class="font-semibold text-white text-lg">Dipali Mathur Dayal</p>
+                <p class="text-white text-sm">CEO - Super Smelly</p>
+                </div>
           </div>
-        </div>
-        <div class="bg-[#1E2A2B] p-8 rounded-3xl w-full max-w-md">
-          <p class="text-[#F5F5F5] text-lg leading-relaxed italic mb-6">
-            Hassle free store creation and it’s amazing to work with a team that truly understands your needs.
-          </p>
-          <div class="flex items-center gap-4">
-            <div class="bg-[#26C6DA] rounded-full w-12 h-12 flex items-center justify-center">
-              <img src="https://metacommerce.vosmos.world/assets/images/men.png" alt="Arjun Patel" class="w-8 h-8 rounded-full">
-            </div>
-            <div class="text-left">
-              <p class="font-semibold text-white text-lg">Arjun Patel</p>
-              <p class="text-white text-sm">Wave Communication</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 2 -->
-      <div class="testimonial-slide flex gap-6 justify-center px-6">
-        <div class="bg-[#1E2A2B] p-8 rounded-3xl w-full max-w-md">
-          <p class="text-[#F5F5F5] text-lg leading-relaxed italic mb-6">
-            The platform allowed me to customize my store. Being a jewellery brand, I wanted to ensure that the detailing of the product does not get lost. The platform was intuitive and easy to use, even for someone with limited technical knowledge.
-          </p>
-          <div class="flex items-center gap-4">
-            <div class="bg-[#26C6DA] rounded-full w-12 h-12 flex items-center justify-center">
-              <img src="https://metacommerce.vosmos.world/assets/images/girl.png" alt="Amrita Roy" class="w-8 h-8 rounded-full">
-            </div>
-            <div class="text-left">
-              <p class="font-semibold text-white text-lg">Amrita Roy</p>
-              <p class="text-white text-sm">1AQB</p>
-            </div>
-          </div>
-        </div>
-        <div class="bg-[#1E2A2B] p-8 rounded-3xl w-full max-w-md">
-          <p class="text-[#F5F5F5] text-lg leading-relaxed italic mb-6">
-            Displaying 50 pieces of art was a cakewalk and I am really looking forward to promoting my art globally with this gallery.
-          </p>
-          <div class="flex items-center gap-4">
-            <div class="bg-[#26C6DA] rounded-full w-12 h-12 flex items-center justify-center">
-              <img src="https://metacommerce.vosmos.world/assets/images/girl.png" alt="Meenakshi" class="w-8 h-8 rounded-full">
-            </div>
-            <div class="text-left">
-              <p class="font-semibold text-white text-lg">Meenakshi</p>
-              <p class="text-white text-sm">Aakar</p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
-
-    <!-- Arrows -->
-    <button onclick="prevSlide()" class="absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-2xl p-2 hover:text-teal-400 transition duration-300">
-      <i class="fas fa-chevron-left"></i>
-    </button>
-    <button onclick="nextSlide()" class="absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-2xl p-2 hover:text-teal-400 transition duration-300">
-      <i class="fas fa-chevron-right"></i>
-    </button>
-  </div>
-</section>
-
-  <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.testimonial-slide');
-
-    function showSlide(index) {
-      const totalSlides = slides.length;
-      if (index >= totalSlides) {
-        currentSlide = 0;
-      } else if (index < 0) {
-        currentSlide = totalSlides - 1;
-      } else {
-        currentSlide = index;
-      }
-      const offset = -currentSlide * 100; // Adjust for slide width
-      document.getElementById('carousel').style.transform = `translateX(${offset}%)`;
-    }
-
-    function nextSlide() {
-      showSlide(currentSlide + 1);
-    }
-
-    function prevSlide() {
-      showSlide(currentSlide - 1);
-    }
-  </script>
-
-
-  <!-- features wala section -->
-   <section class="bg-black text-white min-h-screen p-6 ">
-
-  <div class="max-w-7xl mx-auto flex rounded-xl overflow-hidden bg-gray-900 shadow-lg">
-    
-    <!-- Sidebar Navigation -->
-    <div class="w-1/4 bg-gray-900 p-6 space-y-3">
-      <h2 class="text-2xl font-bold mb-6">Features</h2>
-      <ul class="space-y-2">
-        <li><button id="nav-features1" class="w-full text-left px-4 py-2 rounded-lg hover:bg-gray-700 focus:bg-cyan-500">Photorealism</button></li>
-        <li><button id="nav-features2" class="w-full text-left px-4 py-2 rounded-lg bg-cyan-500">Avatars</button></li>
-        <li><button id="nav-features3" class="w-full text-left px-4 py-2 rounded-lg hover:bg-gray-700 focus:bg-cyan-500">3D Environment</button></li>
-        <li><button id="nav-features4" class="w-full text-left px-4 py-2 rounded-lg hover:bg-gray-700 focus:bg-cyan-500">Product Showcase</button></li>
-        <li><button id="nav-features5" class="w-full text-left px-4 py-2 rounded-lg hover:bg-gray-700 focus:bg-cyan-500">Interactive Manuals</button></li>
-        <li><button id="nav-features6" class="w-full text-left px-4 py-2 rounded-lg hover:bg-gray-700 focus:bg-cyan-500">Virtual Try-On</button></li>
-      </ul>
+      <!-- box-2 -->
+       <div class="testimonial-slide w-full md:w-1/3 px-4">
+        <div class="bg-[#454546] p-8 rounded-3xl w-full max-w-md mx-auto">
+          <p class="text-lg italic mb-6">Hassle free store creation and it’s amazing to work with a team....</p>
+          <div class="flex items-center px-2 gap-4">
+              <img src="https://metacommerce.vosmos.world/assets/images/girl.png" class="w-15 h-20 rounded-full">
+                <div class="text-left gap-4">
+                <p class="font-semibold text-white text-lg">Arjun Patel</p>
+                <p class="text-white text-sm">Wave Communication</p>
+                </div>
+          </div>
+      </div>
+</div>
+      <!-- box-3 -->
+       <div class="testimonial-slide w-full md:w-1/3 px-4">
+        <div class="bg-[#454546] p-8 rounded-3xl w-full max-w-md mx-auto">
+          <p class="text-lg italic mb-6">The platform allowed me to customize my store.....</p>
+          <div class="flex items-center px-2 gap-4">
+              <img src="https://metacommerce.vosmos.world/assets/images/girl.png" class="w-15 h-20 rounded-full">
+                <div class="text-left gap-4">
+                <p class="font-semibold text-white text-lg">Amrita Roy</p>
+                <p class="text-white text-sm">1AQB</p>
+                </div>
+          </div>
+      </div>
+</div>
+      <!-- box-4 -->
+       <div class="testimonial-slide w-full md:w-1/3 px-4">
+        <div class="bg-[#454546] p-8 rounded-3xl w-full max-w-md mx-auto">
+          <p class="text-lg italic mb-6">Displaying 50 pieces of art was a cakewalk...</p>
+          <div class="flex items-center px-2 gap-4">
+              <img src="https://metacommerce.vosmos.world/assets/images/girl.png" class="w-15 h-20 rounded-full">
+                <div class="text-left gap-4">
+                <p class="font-semibold text-white text-lg">Meenakshi</p>
+                <p class="text-white text-sm">Aakar</p>
+                </div>
+          </div>
+      </div>
     </div>
-
-    <!-- Tab Content -->
-    <div class="w-3/4 bg-gray-900 p-6">
-
-      <!-- Tab Panel 1 -->
-      <div class="tab-pane hidden" id="features1">
-        <img src="https://metacommerce.vosmos.world/assets/images/Jepgs/NewPhotorealism.jpg" class="rounded-lg mb-4 h-15 w-20" />
-        <h3 class="text-xl font-semibold mb-2">Photorealism</h3>
-        <p>Experience ultra-realistic renderings of products and environments.</p>
-      </div>
-
-      <!-- Tab Panel 2 (Default Active) -->
-      <div class="tab-pane block" id="features2">
-        <img src="https://metacommerce.vosmos.world/assets/images/Jepgs/Avatar.jpg" class="rounded-lg mb-4" />
-        <h3 class="text-xl font-semibold mb-2">Avatars</h3>
-        <p>User can create a unique personality as they navigate the store.</p>
-      </div>
-
-      <!-- Tab Panel 3 -->
-      <div class="tab-pane hidden" id="features3">
-        <img src="assets/images/Jpegs/3DEnvironment.jpg" class="rounded-lg mb-4" />
-        <h3 class="text-xl font-semibold mb-2">3D Environment</h3>
-        <p>Fully immersive 3D shopping experience with realistic surroundings.</p>
-      </div>
-
-      <!-- Tab Panel 4 -->
-      <div class="tab-pane hidden" id="features4">
-        <img src="https://metacommerce.vosmos.world/assets/images/Jepgs/Product%20Showcase%20.jpg" class="rounded-lg mb-4" />
-        <h3 class="text-xl font-semibold mb-2">Product Showcase</h3>
-        <p>Display products interactively for better customer understanding.</p>
-      </div>
-
-      <!-- Tab Panel 5 -->
-      <div class="tab-pane hidden" id="features5">
-        <img src="https://metacommerce.vosmos.world/assets/images/Jepgs/Interactive%20Manuals%201.jpg" class="rounded-lg mb-4" />
-        <h3 class="text-xl font-semibold mb-2">Interactive Manuals</h3>
-        <p>Step-by-step visual guides to help customers understand features.</p>
-      </div>
-
-      <!-- Tab Panel 6 -->
-      <div class="tab-pane hidden" id="features6">
-        <img src="https://metacommerce.vosmos.world/assets/images/Jepgs/NewNotifications.jpg" class="rounded-lg mb-4" />
-        <h3 class="text-xl font-semibold mb-2">Virtual Try-On</h3>
-        <p>Try products virtually before making a purchase decision.</p>
-      </div>
-
- <div class="tab-pane hidden" id="features7">
-        <img src="https://metacommerce.vosmos.world/assets/images/Jepgs/NewNotifications.jpg" class="rounded-lg mb-4" />
-        <h3 class="text-xl font-semibold mb-2">Virtual Try-On</h3>
-        <p>Try products virtually before making a purchase decision.</p>
-      </div>
-
-       <div class="tab-pane hidden" id="features8">
-        <img src="https://metacommerce.vosmos.world/assets/images/Jepgs/NewNotifications.jpg" class="rounded-lg mb-4" />
-        <h3 class="text-xl font-semibold mb-2">Try-On</h3>
-        <p>Try products virtually before making a purchase decision.</p>
-      </div>
-
-       <div class="tab-pane hidden" id="features9">
-        <img src="https://metacommerce.vosmos.world/assets/images/Jepgs/NewNotifications.jpg" class="rounded-lg mb-4" />
-        <h3 class="text-xl font-semibold mb-2">Virtual On</h3>
-        <p>Try products virtually before making a purchase decision.</p>
-      </div>
-
-       <div class="tab-pane hidden" id="features10">
-        <img src="https://metacommerce.vosmos.world/assets/images/Jepgs/NewNotifications.jpg" class="rounded-lg mb-4" />
-        <h3 class="text-xl font-semibold mb-2">Virtual Try</h3>
-        <p>Try products virtually before making a purchase decision.</p>
-      </div>
-
-       <div class="tab-pane hidden" id="features11">
-        <img src="https://metacommerce.vosmos.world/assets/images/Jepgs/NewNotifications.jpg" class="rounded-lg mb-4" />
-        <h3 class="text-xl font-semibold mb-2">Virty-On</h3>
-        <p>Try products virtually before making a purchase decision.</p>
-      </div>
-
-       <div class="tab-pane hidden" id="features12">
-        <img src="https://metacommerce.vosmos.world/assets/images/Jepgs/NewNotifications.jpg" class="rounded-lg mb-4" />
-        <h3 class="text-xl font-semibold mb-2">Virtual Tn</h3>
-        <p>Try products virtually before making a purchase decision.</p>
-      </div>
-
-       <div class="tab-pane hidden" id="features13">
-        <img src="https://metacommerce.vosmos.world/assets/images/Jepgs/NewNotifications.jpg" class="rounded-lg mb-4" />
-        <h3 class="text-xl font-semibold mb-2">Virtun</h3>
-        <p>Try products virtually before making a purchase decision.</p>
-      </div>
-
-
-    </div>
+</div>
   </div>
 
-  <!-- JS Logic for Tabs -->
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll("button[id^='nav-features']");
-    const tabs = document.querySelectorAll(".tab-pane");
+<button onclick="next()"class="absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-2xl p-2 hover:text-teal-400 transition duration-300"> ❯</button>
+  </div>
+  </section>
 
-    buttons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        const idSuffix = btn.id.replace('nav-features', ''); // Extract number, e.g., '2'
-        const targetTab = document.getElementById(`features${idSuffix}`);
-
-        // Hide all tabs
-        tabs.forEach(tab => {
-          tab.classList.add("hidden");
-          tab.classList.remove("block");
-        });
-
-        // Remove highlight from all buttons
-        buttons.forEach(b => b.classList.remove("bg-cyan-500"));
-
-        // Show selected tab
-        if (targetTab) {
-          targetTab.classList.remove("hidden");
-          targetTab.classList.add("block");
-        }
-
-        // Highlight current button
-        btn.classList.add("bg-cyan-500");
-      });
-    });
+<script>
+  let index = 0;
+  const slides=document.querySelectorAll('.testimonial-slide');
+  const slidew=slides[0].offsetWidth;
+   function showSlide(index) {
+    const maxSlide = slides.length - 2; // because 2 are visible at a time
+    if (index < 0) index = 0;
+    if (index > maxSlide) index = maxSlide;
+    currentSlide = index;
+    document.getElementById('carousel').style.transform = `translateX(-${slideWidth * index}px)`;
+  }
+  function nextSlide() {
+    showSlide(currentSlide + 1);
+  }
+  
+  function prevSlide() {
+    showSlide(currentSlide - 1);
+  }
+    window.addEventListener('resize', () => {
+    showSlide(currentSlide);
   });
 </script>
 
-   </section>
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
