@@ -61,7 +61,7 @@
       <div class="rounded-3xl overflow-hidden">
         <!-- Placeholder video; update the src with the correct path -->
         <video width="720" height="auto" autoplay loop muted class="rounded-3xl shadow-lg">
-          <source src="B-roll-18-01-2023.webm" type="video/webm">
+          <source src="B roll(18-01-2023).webm" type="video/webm">
           Your browser does not support the video tag.
         </video>
       </div>
@@ -239,9 +239,7 @@
     <button onclick="prevSlide()" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-[#4d4d4e] text-white text-2xl rounded-full w-10 h-10 flex items-center justify-center z-10 shadow">
       ❮
     </button>
-    <button onclick="nextSlide()" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-[#4d4d4e] text-white text-2xl rounded-full w-10 h-10 flex items-center justify-center z-10 shadow">
-      ❯
-    </button>
+    
 
     <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
       <!-- Slide 1 -->
@@ -301,6 +299,9 @@
       </div>
 
     </div>
+    <button onclick="nextSlide()" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-[#4d4d4e] text-white text-2xl rounded-full w-10 h-10 flex items-center justify-center z-10 shadow">
+      ❯
+    </button>
   </div>
 </section>
 
@@ -332,12 +333,122 @@
   window.addEventListener('resize', updateCarousel);
 </script>
 
+<!-- button wala section -->
+      <!-- maincontainer -->
+<!-- maincontainer -->
+<div class="flex bg-[#121212] rounded-2xl p-6 w-[90%] max-w-6xl justify-between mx-auto mt-12 shadow-lg shadow-[#0AEAC3]">
+  <!-- left button part -->
+  <div class="w-1/3 pr-4 border-r border-gray-700">
+    <ul id="featurestab" class="space-y-2">
+      <li><button class="tab-btn flex justify-between items-center w-full px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-[#0AEAC3]" data-tab="photorealism">Photorealism ❯</button></li>
+      <li><button class="tab-btn flex justify-between items-center w-full px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-[#0AEAC3]" data-tab="avatars">Avatars ❯</button></li>
+      <li><button class="tab-btn flex justify-between items-center w-full px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-[#0AEAC3]" data-tab="environment">3D Environment ❯</button></li>
+      <li><button class="tab-btn flex justify-between items-center w-full px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-[#0AEAC3]" data-tab="productShowcase">Product Showcase ❯</button></li>
+      <li><button class="tab-btn flex justify-between items-center w-full px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-[#0AEAC3]" data-tab="interactiveManuals">Interactive Manuals ❯</button></li>
+      <li><button class="tab-btn flex justify-between items-center w-full px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-[#0AEAC3]" data-tab="notifications">Notifications, Polls & Feedback ❯</button></li>
+      <li><button class="tab-btn flex justify-between items-center w-full px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-[#0AEAC3]" data-tab="chatIntegrations">Chat Integrations ❯</button></li>
+      <li><button class="tab-btn flex justify-between items-center w-full px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-[#0AEAC3]" data-tab="virtualTryOn">Virtual Try-On ❯</button></li>
+      <li><button class="tab-btn flex justify-between items-center w-full px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-[#0AEAC3]" data-tab="responsive">Responsive ❯</button></li>
+      <li><button class="tab-btn flex justify-between items-center w-full px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-[#0AEAC3]" data-tab="reports">Reports & Analytics ❯</button></li>
+    </ul>
+  </div>
 
+  <!-- right wala part -->
+  <div class="pl-6 w-2/3" id="featureContent">
+    <img id="featureImage" src="https://metacommerce.vosmos.world/assets/images/Jepgs/NewPhotorealism.jpg" class="rounded-lg mb-4" alt="Feature Image" />
+    <h2 id="featureHeading" class="text-2xl font-bold mb-2">Photorealism</h2>
+    <p id="featureText" class="text-gray-300">Visuals that look real and depict every detail of the product.</p>
+  </div>
+</div>
 
+<!--this style only works for .active state since @apply doesn't work inline -->
+<style>
+  .tab-btn.active {
+    background-color: #2dd4bf;
+    color: black;
+  }
+</style>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabs = {
+      photorealism: {
+        image: "https://metacommerce.vosmos.world/assets/images/Jepgs/NewPhotorealism.jpg",
+        title: "Photorealism",
+        content: "Visuals that look real and depict every detail of the product.",
+      },
+      avatars: {
+        image: "https://metacommerce.vosmos.world/assets/images/Jepgs/Avatar.jpg",
+        title: "Avatars",
+        content: "Customizable avatars for enhanced digital interaction.",
+      },
+      environment: {
+        image: "https://metacommerce.vosmos.world/assets/images/Jepgs/Interactive%20Manuals%201.jpg",
+        title: "3D Environment",
+        content: "Immersive 3D environments for realistic product visualization.",
+      },
+      productShowcase: {
+        image: "https://metacommerce.vosmos.world/assets/images/Jepgs/Product%20Showcase%20.jpg",
+        title: "Product Showcase",
+        content: "Showcase products in a 3D space for better engagement.",
+      },
+      interactiveManuals: {
+        image: "https://metacommerce.vosmos.world/assets/images/Jepgs/Interactive%20Manuals%201.jpg",
+        title: "Interactive Manuals",
+        content: "Engaging manuals that enhance user understanding.",
+      },
+      notifications: {
+        image: "https://metacommerce.vosmos.world/assets/images/Jepgs/NewNotifications.jpg",
+        title: "Notifications, Polls & Feedback",
+        content: "Engage users with notifications and gather feedback.",
+      },
+      chatIntegrations: {
+        image: "https://metacommerce.vosmos.world/assets/images/Jepgs/Chat.jpg",
+        title: "Chat Integrations",
+        content: "Integrate chat for real-time customer support.",
+      },
+      virtualTryOn: {
+        image: "https://metacommerce.vosmos.world/assets/images/Jepgs/Virtual%20try%20On.jpg",
+        title: "Virtual Try-On",
+        content: "Allow customers to try products virtually.",
+      },
+      responsive: {
+        image: "https://metacommerce.vosmos.world/assets/images/Jepgs/NewResponsive.jpg",
+        title: "Responsive",
+        content: "Optimized for all devices for a seamless experience.",
+      },
+      reports: {
+        image: "https://metacommerce.vosmos.world/assets/images/Jepgs/Reports.jpg",
+        title: "Reports & Analytics",
+        content: "Gain insights into user behavior and product performance.",
+      },
+    };
 
+    const buttons = document.querySelectorAll(".tab-btn");
+    const featureImage = document.getElementById("featureImage");
+    const featureTitle = document.getElementById("featureHeading");
+    const featureDescription = document.getElementById("featureText");
 
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        buttons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
 
+        const key = button.getAttribute("data-tab");
+        const tabData = tabs[key];
+
+        if (tabData) {
+          featureImage.src = tabData.image;
+          featureTitle.textContent = tabData.title;
+          featureDescription.textContent = tabData.content;
+        }
+      });
+    });
+
+    // Trigger default active
+    buttons[0].classList.add("active");
+  });
+</script>
 
 
 </body>
