@@ -1,0 +1,18 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#bulb {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 4px solid black;
+    box-shadow: 4px 4px; /* Added horizontal and vertical offsets */
+    background-color: yellow;
+}
+button{
+    padding: 10px 30px;
+    font-size: 20px;
+    margin: 50px;
+}
