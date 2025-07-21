@@ -62,3 +62,36 @@ console.log(Object.values(tinder).length); // 3
 console.log(Object.hasOwn(tinder, "id")); // true
 console.log(Object.hasOwn(tinder, "email")); // false
 console.log(Object.hasOwn(tinder, "isLoggedin")); // true
+
+
+
+const course={
+    coursename: "js in hindi",
+    price: 999,
+    courseinstructor: "Aastha Gupta",
+
+}
+// course.courseinstructor
+// destructuring is a way to extract values from an object and assign them to variables
+const {courseinstructor}= course; // destructuring
+console.log(courseinstructor); // Aastha Gupta
+const {coursename, price}= course; // destructuring
+console.log(coursename); // js in hindi
+console.log(price); // 999
+// destructuring with default value
+const {coursename: cname, price: cost, courseinstructor: instructor="Aastha"}= course; // destructuring with default value
+console.log(cname); // js in hindi
+console.log(cost); // 999
+console.log(instructor); // Aastha Gupta
+// destructuring with default value and renaming
+const {coursename: courseName="js in english", price: coursePrice=1000, courseinstructor: courseInstructor="Aastha Gupta"}= course; // destructuring with default value and renaming
+console.log(courseName); // js in hindi
+
+// api is a way to extract values from an object and assign them to variables
+
+// {
+//     "name": "Aastha",
+//     "course": "js in hindi",
+//    " price": 999,
+
+// }
