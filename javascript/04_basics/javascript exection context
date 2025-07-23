@@ -1,0 +1,22 @@
+
+
+1.
+
+{}->global execution context
+sabka global ec alg hota hai .......browser  pe this ka value - window object aati hahi
+
+javascript is single threaded 
+
+
+2. functional execution context
+
+3.eval execution context
+
+
+
+
+
+
+{} runs in two phases
+phase one memory CREATION PHASE
+second is execution phase
