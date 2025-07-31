@@ -1,0 +1,62 @@
+// JavaScript execution context
+
+import { useContext } from "react";
+
+// 1. Global execution context
+// {} -> Global execution context
+// Each environment has its own global execution context.
+// In the browser, the value of 'this' in the global context is the window object.
+
+// JavaScript is single-threaded.
+
+// 2. Functional execution context
+
+// 3. Eval execution context
+
+// **** Phases of execution ****
+// Phase 1: Memory creation phase
+// Phase 2: Execution phase
+
+// {} runs in two phases:
+// Phase one: Memory creation  phase
+// Phase two: Execution phase
+
+// let val1=10;
+// let val2=5;
+// function addnum(num1,num2){
+//     let total=num1+num2
+//     return total
+// }
+// let result1=adddnum(val1,val2)
+// let result2=addnum(10,2)
+
+
+// global execution -> this
+// memory creation phase -
+//                     val1->undefined
+//                     val2-> undefined
+//                     addnum->defined
+//                     result1->undefined
+//                     result2->undefined
+
+// execution phase
+//             val1->10
+//             val2->5
+//             addnum->
+//                     new variable envirment + execution thread
+//                                 memory phase    
+//                                         val1->undefined
+//                                         val2->undefined
+//                                         total->undefined
+//                                 execution Context
+//                                         num1->10
+//                                         num2->5
+//                                         total->15//return hoga global executon me
+                                        
+//                             //aab ye new envirment wala phase delete hoga
+
+// //important hai kafi jada
+
+// call stacks works on lifo  concept 
+
+
